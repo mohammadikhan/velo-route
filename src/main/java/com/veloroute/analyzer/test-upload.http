@@ -1,0 +1,17 @@
+### Test Real-World Ride Ingestion
+POST http://localhost:8080/api/rides/upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="mississauga_ride.json"
+Content-Type: application/json
+
+{
+  "rideName": "Credit River Waterfront Loop 2",
+  "points": [
+    { "timestamp": "08:00:00", "latitude": 43.5524, "longitude": -79.5873, "elevation": 76.2 },
+    { "timestamp": "08:01:30", "latitude": 43.5558, "longitude": -79.5910, "elevation": 79.5 },
+    { "timestamp": "08:03:00", "latitude": 43.5592, "longitude": -79.5955, "elevation": 84.1 }
+  ]
+}
+--WebAppBoundary--

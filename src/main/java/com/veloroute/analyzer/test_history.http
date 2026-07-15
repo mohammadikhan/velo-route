@@ -1,0 +1,7 @@
+### Test 1: Get Global Ride History Feed
+GET http://localhost:8080/api/rides
+Accept: application/json
+
+### Test 2: Get Highly Detailed Ride Map Metadata (Replace the '1' with your ride ID if different)
+GET http://localhost:8080/api/rides/7
+Accept: application/json

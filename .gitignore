@@ -34,3 +34,6 @@ build/
 
 # HTTP Client logs
 .idea/httpRequests/
+
+# Environment variables
+.env

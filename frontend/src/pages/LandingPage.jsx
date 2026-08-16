@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState} from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Typewriter from 'typewriter-effect';
@@ -8,19 +8,11 @@ const videos = ["/bike1.mp4", "/bike2.mp4", "./bike3.mp4"]
 const LandingPage = () => {
 
     const [currentVideo, setCurrentVideo] = useState(0)
-    const videoRef = useRef(null)
     const navigate = useNavigate()
 
     const handleVideo = () => {
         setCurrentVideo(prev => (prev + 1) % videos.length)
     }
-
-    useEffect(() => {
-        if (videoRef.current) {
-            videoRef.current.load()
-            videoRef.current.play();
-        }
-    }, [currentVideo])
 
     return (
         <>
@@ -85,7 +77,6 @@ const LandingPage = () => {
                 <div style={{flex: 1, position: "relative", overflow: "hidden"}}>
                     <video
                         key={currentVideo}
-                        ref={videoRef}
                         autoPlay
                         muted
                         onEnded={handleVideo}

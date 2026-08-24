@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Typewriter from 'typewriter-effect';
 
-const videos = ["/bike1.mp4", "/bike2.mp4", "./bike3.mp4"]
+const videos = ["/bike1.mp4", "/bike2.mp4", "/bike3.mp4"]
 
 const LandingPage = () => {
 

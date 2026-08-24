@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { MapContainer, TileLayer, Polyline, Marker, useMap} from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -21,7 +21,7 @@ const AdjustMap = ({ coords }) => {
 }
 
 const RouteMap = ({ gpsPoints, onIndexChange, mapHeight }) => {
-  const coords = gpsPoints.map(p => [p.latitude, p.longitude])
+  const coords = useMemo(() => gpsPoints.map(p => [p.latitude, p.longitude]), [gpsPoints])
   const [index, setIndex] = useState(0)
   const [playing, setPlaying] = useState(false)
   const [speed, setSpeed] = useState(1)

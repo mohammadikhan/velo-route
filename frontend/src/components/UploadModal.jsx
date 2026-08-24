@@ -36,7 +36,7 @@ const UploadModal = ({ onClose, onSuccess }) => {
           setStatus("error")
           setErrorMessage("[ERROR]: Failed to check processing status")
         }
-      }, 200)
+      }, 2000)
 
     } catch (err) {
       setStatus("error")
@@ -95,7 +95,7 @@ const UploadModal = ({ onClose, onSuccess }) => {
                     <button type="button" onClick={handleClose} style={cancelButton}>Cancel</button>
                   </div>
                 </form>
-            ) : status === "Uploading" ? (
+            ) : status === "uploading" ? (
                 <p style={{color: "white"}}>Uploading file...</p>
             ) : status === "processing" ? (
                 <p style={{color: "white"}}>Processing ride data, please wait...</p>

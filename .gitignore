@@ -37,3 +37,8 @@ build/
 
 # Environment variables
 .env
+
+# Test / sample data files
+test.gpx
+test.json
+test-ride.json

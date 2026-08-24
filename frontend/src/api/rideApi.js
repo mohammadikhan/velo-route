@@ -1,5 +1,5 @@
 
-const ROUTE = "http://174.129.128.223:8080/api/rides";
+const ROUTE = "http://32.196.100.139:8080/api/rides";
 
 export const uploadRide = async (file) => {
     const form = new FormData();

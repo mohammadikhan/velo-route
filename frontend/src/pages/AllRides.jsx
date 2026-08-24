@@ -105,7 +105,7 @@ const RideCard = ({ride, onClick}) => {
                                     {label}
                                 </p>
 
-                                <p style={{margin: 0, fontSize: "14px", fontWeight: 600, color: "var(--text-h"}}>
+                                <p style={{margin: 0, fontSize: "14px", fontWeight: 600, color: "var(--text-h)"}}>
                                     {value}
                                 </p>
                             </div>

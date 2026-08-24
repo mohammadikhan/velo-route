@@ -89,7 +89,7 @@ const RouteMap = ({ gpsPoints, onIndexChange, mapHeight }) => {
               </button>
             </div>
 
-            {/*On the ride side, add the speed meter to change the speed of the animation*/}
+            {/*On the right side, add the speed meter to change the speed of the animation*/}
             <label style={{display: "flex", alignItems: "center", gap: "8px", color: "#FFFFFF", fontSize: "18px"}}>
               Speed: <strong>{speed}x</strong>
               <input
